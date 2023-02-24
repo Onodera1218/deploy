@@ -2,21 +2,20 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-st.info('条件で絞り込む')
-st.text_input('入居可能時期')
-st.selectbox('借家', ('普通', '定期'))
-st.selectbox('部屋の広さ', ('下限なし', '10畳'))
-st.text_input('職場の住所（近いところを探す）')
-st.selectbox('空きのある保育所（10km圏内）', ('希望', '不要'))
+st.markdown('<p style="font-family:HGP創英角ﾎﾟｯﾌﾟ体; color:Salmon; font-size: 40px;">条件で絞り込む</p>',
+            unsafe_allow_html=True)
 
+# 選択された築年数でデータフレームをフィルタリング
+df1 = pd.read_excel("muroran_data.xlsx",engine="openpyxl")
+number1 = st.multiselect('希望のエリアを選択してください',df1['エリア'].unique())
+filtered_df1 = df1[df1['エリア'].isin(number1)]
 
-cost = st.slider('家賃（万/月）?', 0, 30, 5)
+number2 = st.multiselect('希望の築年数を選択してください',filtered_df1['築年数'].unique())
+filtered_df2 = filtered_df1[filtered_df1['築年数'].isin(number2)]
 
-direction = st.radio(
-    "方位",
-    ('南', '北', '東','西'))
+number3 = st.multiselect('希望の階数を選択してください',filtered_df2['階数'].unique())
+filtered_df3 = filtered_df2[filtered_df2['階数'].isin(number3)]
 
-options = st.multiselect(
-    '建物設備',
-    ['駐車場', 'バルコニー', 'エレベーター', 'オール電化','公園1km以内', 'スーパー1km以内'])
+st.table(filtered_df3)
+
 
