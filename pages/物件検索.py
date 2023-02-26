@@ -6,7 +6,7 @@ st.markdown('<p style="font-family:HGP創英角ﾎﾟｯﾌﾟ体; color:Salmon;
             unsafe_allow_html=True)
 
 # 選択された築年数でデータフレームをフィルタリング
-df1 = pd.read_excel("muroran_data.xlsx",engine="openpyxl")
+df1 = pd.read_csv("muroran_data.csv",engine="openpyxl")
 number1 = st.multiselect('希望のエリアを選択してください',df1['エリア'].unique())
 filtered_df1 = df1[df1['エリア'].isin(number1)]
 
