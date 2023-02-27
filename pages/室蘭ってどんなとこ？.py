@@ -15,11 +15,11 @@ st.markdown('<p style="font-family:HGP創英角ﾎﾟｯﾌﾟ体; color:black; 
             unsafe_allow_html=True)
 
 # 「工場夜景」の画像を複数表示
-num=2
-lcol=[]
-col= st.columns(num)
+num = 2
+lcol = []
+col = st.columns(num)
 
-for i in list(range(0,num,1)):
+for i in list(range(0, num, 1)):
     with col[i]:
         st.header("")
         st.image(str(i+1)+".png", use_column_width=True)
@@ -31,11 +31,11 @@ st.markdown('<p style="font-family:HGP創英角ﾎﾟｯﾌﾟ体; color:black; 
             unsafe_allow_html=True)
 
 # 「食べ物」の画像を複数表示
-num=2
-lcol=[]
-col= st.columns(num)
+num = 2
+lcol = []
+col = st.columns(num)
 
-for i in list(range(0,num,1)):
+for i in list(range(0, num, 1)):
     with col[i]:
         st.header("")
         st.image(str(i+1)+".jpg", use_column_width=True)
@@ -62,5 +62,6 @@ st.markdown('<p style="font-family:HGP創英角ﾎﾟｯﾌﾟ体; color:Salmon;
 
 st.markdown('<p style="font-family:HGP創英角ﾎﾟｯﾌﾟ体; color:black; font-size: 20px;">室蘭市の口コミは以下のリンクからご覧になれます。</p>',
             unsafe_allow_html=True)
-            
-# ここに「室蘭の口コミ」リンクをお願いします！
+
+# 「室蘭の口コミ」リンク
+st.write('ここをクリック ⇒　', 'https://sumaity.com/town/hokkaido/muroran/review/', '')
