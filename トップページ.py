@@ -20,3 +20,4 @@ img = Image.open('map-hokkaido.png')
 st.image(img, caption='', width=600)
 
 # %%
+#
