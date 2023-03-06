@@ -46,16 +46,16 @@ st.markdown('<p style="font-family:HGP創英角ﾎﾟｯﾌﾟ体; color:Salmon;
 st.markdown('<p style="font-family:HGP創英角ﾎﾟｯﾌﾟ体; color:black; font-size: 20px;">室蘭市では、子育て支援も充実しており、子育て世代が安心して働く事が出来るよう学童保育の価格もとても良心的なものとなっています。（月額：600円程）また、「室蘭市生涯学習センターきらん」などの複合公共施設もあり、季節や天候に関係なく小さな子供も遊ばせる事が出来ます。</p>',
             unsafe_allow_html=True)
 
-# 「きらん」の画像を複数表示
-col1, col2 = st.columns(2)
+# 「きらん」の画像を複数表示 ※著作権の確認が取れないので非表示
+# col1, col2 = st.columns(2)
 
-with col1:
-    st.header("")
-    st.image("kirangaikan.jpg", use_column_width=True)
+# with col1:
+#     st.header("")
+#     st.image("kirangaikan.jpg", use_column_width=True)
 
-with col2:
-    st.header("")
-    st.image("kiran.jpg", use_column_width=True)
+# with col2:
+#     st.header("")
+#     st.image("kiran.jpg", use_column_width=True)
 
 st.markdown('<p style="font-family:HGP創英角ﾎﾟｯﾌﾟ体; color:Salmon; font-size: 40px;">室蘭の口コミ</p>',
             unsafe_allow_html=True)
